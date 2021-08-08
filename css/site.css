@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #2563c0;
-    --secondary-color: #ee764b;
+    --primary-color: #000000;
+    --secondary-color: #11cf00;
     --dark-color: #292929;
     --white-color: #e8ebe9;
 }
@@ -63,7 +63,7 @@ main > .container {
 }
 
 .js-icon {
-    color: rgb(226.211, 4);
+    color: #e4d407;
 }
 
 .html5-icon {

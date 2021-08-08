@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
     <head>
-        <title>App Name: A Coding Project By Troy Szatkowski</title>
+        <title>Rewind: A Coding Project By Troy Szatkowski</title>
         <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -22,7 +22,7 @@
         <!-- NAV -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="img/icon.png" alt="Site Logo" class="d-inline-block align-text-top" width="30" height="30" /> BOCRA</a>
+                <a class="navbar-brand" href="index.html"><img src="img/icon.png" alt="Site Logo" class="d-inline-block align-text-top" width="30" height="30" /> REWIND</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -51,20 +51,55 @@
         <!-- MAIN -->
         <main class="flex-shrink-0">
             <div class="container py-5 px-5 mt-5">
-                <h2 class="border-1 border-bottom border-dark">The Code for BOCRA</h2>
+                <h2 class="border-1 border-bottom border-dark">The Code for REWIND</h2>
                 <div class="row row-cols-1 row-cols-lg-2">
                     <div class="col-lg-8">
                         <pre class="line-numbers"><code class="language-javascript">
-                            // Call Hello
-                            function HelloWorld() {
-                                alert('hello World!');
+                            // Get the string from the page
+                            // Controller function
+                            function getValue() {
+                                document.getElementById('alert').classList.add('invisible');
+                            
+                                let userString = document.getElementById('userString').value;
+                            
+                                let revString = reverseString(userString);
+                            
+                                displayString(revString);
                             }
+                            
+                            // Reverse the string
+                            // Logic function
+                            function reverseString(userString) {
+                                let revString = [];
+                            
+                                // reverse a string using a for loop
+                                for (let index = userString.length - 1; index >= 0; index--) {
+                                    revString += userString[index];
+                                }
+                            
+                                return revString;
+                            }
+                            
+                            // Display the reversed string to the user
+                            // View function
+                            function displayString(revString) {
+                                // write to the page
+                                document.getElementById('msg').innerHTML = `Your string reversed is: ${revString}`;
+                            
+                                // show the alert box
+                                document.getElementById('alert').classList.remove('invisible');
+                            }
+                            
                         </code></pre>
                     </div>
                     <div class="col-lg-4">
-                        <p>The Code is structured in one function.</p>
-                        <h5>Hello World</h5>
-                        <p>Hellow World is a function that displays an lert with a message of "Hello World"</p>
+                        <p>The Code is structured in several functions.</p>
+                        <h5>getValue</h5>
+                        <p>Gets the user input string</p>
+                        <h5>reverseString</h5>
+                        <p>Creates an array of string characters in reverse from the user input string.</p>
+                        <h5>displayString</h5>
+                        <p>Displays the reversed string to user in an alert box.</p>
                     </div>
                 </div>
             </div>
@@ -83,17 +118,17 @@
                     <div class="col d-flex justify-content-start justify-content-lg-end align-items-center social">
                         <div class="row">
                             <div class="col">
-                                <a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                                <a href="https://www.linkedin.com/in/troy-m-szatkowski/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
                             </div>
                             <div class="col">
-                                <a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                                <a href="https://github.com/TSZI" target="_blank"><i class="fab fa-github fa-2x"></i></a>
                             </div>
-                            <div class="col">
+                            <!-- <div class="col">
                                 <a href="#" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
-                            </div>
-                            <div class="col">
+                            </div> -->
+                            <!-- <div class="col">
                                 <a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
