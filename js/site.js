@@ -27,7 +27,7 @@ function reverseString(userString) {
 // View function
 function displayString(revString) {
     // write to the page
-    document.getElementById('msg').innerHTML = `Your string reversed is: ${revString}`;
+    document.getElementById('msg').innerHTML = `Your string reversed is: <strong> ${revString} </strong>`;
 
     // show the alert box
     document.getElementById('alert').classList.remove('invisible');
